@@ -6,3 +6,9 @@
 6. filter age of users in select tag and sort.
 7. provide badgs for search and filter.
 8. show values of search and age filter in url.
+
+
+1. user register form:
+* user have to fill name, email, age, address, gender in form
+* a submit button saves user data in local storage.
+* 
