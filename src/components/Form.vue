@@ -1,6 +1,9 @@
 <template>
     <div class="mx-4 my-10 md:mx-auto md:w-2/3 lg:w-2/4 h-full items-center border border-blue-600 p-4 rounded-lg shadow-xl">
-        <form class="mx-6 md:mx-10">
+        <form class="mx-6 my-6 md:mx-10" @submit.prevent="">
+            <div>
+                <h1 class="text-2xl mb-4 text-center font-bold">Register New User</h1>
+            </div>
             <div class="relative z-0 mb-6 w-full group">
                 <input type="text" name="name" id="name" class="input peer" placeholder=" " required="">
                 <label for="name" class="input-label">Name</label>
@@ -17,7 +20,7 @@
                     <input type="address" name="address" id="address" class="input peer" placeholder=" " required="">
                     <label for="address" class="input-label">Address</label>
                 </div>
-        <div class="flex justify-around">
+        <div class="flex flex-col md:flex-row">
             <div class="checkbox-parent">
                 <input checked="" id="male" type="radio" value="" name="gender" class="checkbox-input">
                 <label for="male" class="checkbox-label">Male</label>
@@ -28,7 +31,7 @@
             </div>
         </div>
         <div class="flex justify-center items-center">
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn">Register</button>
         </div>
         </form>
     </div>
@@ -36,6 +39,8 @@
 
 <script>
 export default {
-    
+    methods: {
+
+    }
 }
 </script>
