@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
                     <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                        
+                        <td>{{users.name}}</td>
                     </tr>
                     <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
                         
@@ -49,13 +49,26 @@
 
 </template>
 <script>
+import Form from './Form.vue'
+
 export default {
-    methods: {
-        getData() {
-            this.$http.get('/api/users').then(({ data }) => {
-                this.names = data
-            })
+    data: 'Form',
+    data() {
+        return {
+            users: [],
         }
+    },
+    methods: {
+        deleteUser(id) {
+            this.$store.dispatch('deleteUser', users.id);
+
+        },
+        editUser(id) {
+            this.$store.dispatch('editUser', users.id);
+
+
+        }
+
     },
     mounted() {
         
