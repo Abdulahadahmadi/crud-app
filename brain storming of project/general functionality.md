@@ -12,7 +12,8 @@
 * create a form with name, email, age, address and gender feilds. ----> Done
 * user have to fill name, email, age, address, gender in form. ----->
 * a submit button saves user data in local storage. ------> 
-* save data of inputs in local storage.
 
-2. store data of inputs in local storage:
+2. store data of inputs in local storage. -----> Done
+
+3. get data from local storage and show in table:
 * 
