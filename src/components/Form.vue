@@ -35,7 +35,7 @@
         </div>
         
         <div v-if="edit === true" class="flex justify-center items-center">
-            <button  class="btn" @click="editData">Update</button>
+            <button  class="btn" @click="editData()">Update</button>
         </div>
         </form>
 
@@ -48,11 +48,9 @@
 import { ref, watch } from 'vue'
 import { storage } from '../useStorage/storage'
 
-    let name = storage('name')
-    let email = storage('email')
-    let age = storage('age')
-    let address = storage('address')
-
+    // get value of gender
+    
+ 
     export default {
         name: 'Form',
         data() {
@@ -61,6 +59,7 @@ import { storage } from '../useStorage/storage'
                 email: "",
                 age: "",
                 address: "",
+                gender: "",
                 users: [],
                 edit: false
             }
@@ -94,7 +93,8 @@ import { storage } from '../useStorage/storage'
                     name: this.name,
                     email: this.email,
                     age: this.age,
-                    address: this.address
+                    address: this.address,
+                    gender: this.gender,
                 }
                 if(localStorage.users){
                     let isUsers = localStorage.users;
@@ -109,6 +109,7 @@ import { storage } from '../useStorage/storage'
                 this.email = "";
                 this.age = "";
                 this.address = "";
+                this.gender = "";
             }
 
         }
